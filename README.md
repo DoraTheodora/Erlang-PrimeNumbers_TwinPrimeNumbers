@@ -20,7 +20,7 @@ It is (currently) unknown whether there are an infinite number of twin primes.
 
 The task is to write a parallel program that counts the number of primes less than n for any number n and also finds and lists all twin primes less than n. The code should run on linux.
 
-<b>Example output after running your code with n = 50 would be: </b>
+<b>Example output after running code with n = 50 would be: </b>
 
 ```code
 >
@@ -51,7 +51,7 @@ Full source code includes:
 
         2. Speedup Results Both absolute speedup and relative speedup should be calculated
 
-        3. Scalability Graph(s) showing the scalabiltiy of your code.
+        3. Scalability Graph(s) showing the scalabiltiy of the code.
 
     The report does not need to be long. It must be concise and on point.
 
