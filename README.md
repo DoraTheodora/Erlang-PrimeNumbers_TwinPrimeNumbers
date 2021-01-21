@@ -37,7 +37,7 @@ Twin Primes: 3, 5, 7, 11, 13, 17, 19, 29, 31, 41, 43
 
 - Source Code 
 
-Full source code includes:
+<b>Full source code includes: </b>
  - README
  - full installation instructions
  - Makefile 
