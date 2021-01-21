@@ -35,16 +35,21 @@ Twin Primes: 3, 5, 7, 11, 13, 17, 19, 29, 31, 41, 43
 
 - Source Code 
 
-Full source code including README, full installation instructions, Makefile and Doxygen Configuration file;
+Full source code includes:
+ - README
+ - full installation instructions
+ - Makefile 
+ - Doxygen 
+ - Configuration file
  - Report 
 
- A short report on the approach you took to achieving maximum concurrency. This will contain:
+    A short report on the approach took to achieving maximum concurrency. This will contain:
 
-    1. Pseudocode Outline of the algorithm illustrated with pseudocode;
+        1. Pseudocode Outline of the algorithm illustrated with pseudocode;
 
-    2. Speedup Results Both absolute speedup and relative speedup should be calculated
+        2. Speedup Results Both absolute speedup and relative speedup should be calculated
 
-    3. Scalability Graph(s) showing the scalabiltiy of your code.
+        3. Scalability Graph(s) showing the scalabiltiy of your code.
 
 - The report does not need to be long. It must be concise and on point.
-- The idea is that you learn how to measure code performance as well as write parallel code. There is plenty of scope for making the code efficient.
+
