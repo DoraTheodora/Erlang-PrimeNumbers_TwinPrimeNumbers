@@ -4,6 +4,7 @@
 <h6>Developer: Theodora Tataru </h6>
 <h6>Tutor: Joseph Kehoe </h6>
 <h6>Institute of Technology Carlow, 2021 </h6>
+
 ### Prime Numbers
 
 There are an infinite number of prime numbers. Amongst the primes there are what are known as twin primes.
