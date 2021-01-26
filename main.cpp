@@ -12,14 +12,17 @@ int main(void)
 {
     Primes p = Primes();
     int number = 0;
-    std::cout << "(Insert -1 to stop)" << std::endl;
+    /*std::cout << "(Insert -1 to stop)" << std::endl;
     while(number != -1)
     {   
         std::cout << "Please insert a number: ";
         std::cin >> number;
         p.isPrime(number);
         std:: cout << std::endl;
-    }
+    }*/
+    std::cout << "Please insert a number: ";
+    std::cin >> number;
+    p.numbersPrimeLessThen(number);
 
 
     return 0;

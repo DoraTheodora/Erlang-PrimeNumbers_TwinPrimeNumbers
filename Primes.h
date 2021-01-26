@@ -7,4 +7,6 @@ class Primes
     }
     ~Primes();
     bool isPrime(int n);
+
+    void numbersPrimeLessThen(int N);
 };

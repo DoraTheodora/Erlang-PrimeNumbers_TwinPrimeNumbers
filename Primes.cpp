@@ -18,3 +18,11 @@ bool Primes::isPrime(int n)
     std::cout << number << " is prime" << std::endl;
     return true;
 }
+
+void Primes::numbersPrimeLessThen(int N)
+{
+    for(int i = N; i >=2; i--)
+    {
+        isPrime(i);
+    }
+}
