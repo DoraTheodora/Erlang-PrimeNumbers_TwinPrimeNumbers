@@ -1,4 +1,4 @@
-# Erlang->Prime Numbers and Twin Prime Numbers
+# Prime Numbers and Twin Prime Numbers
 
 ### Concurrency Project
 <h6>Developer: Theodora Tataru </h6>
