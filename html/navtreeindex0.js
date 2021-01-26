@@ -1,0 +1,25 @@
+var NAVTREEINDEX0 =
+{
+"Primes_8cpp.html":[3,0,1],
+"Primes_8h.html":[3,0,2],
+"Primes_8h_source.html":[3,0,2],
+"annotated.html":[2,0],
+"classPrimes.html":[2,0,0],
+"classPrimes.html#a3e6c9ae9222cc4cfac3e734ec1f23ecb":[2,0,0,1],
+"classPrimes.html#a70cd05a47aebde487578eb445127d01e":[2,0,0,0],
+"classPrimes.html#aee78865d4c4afb3f7d30f0209ac0a56d":[2,0,0,2],
+"classes.html":[2,1],
+"files.html":[3,0],
+"functions.html":[2,2,0],
+"functions_func.html":[2,2,1],
+"globals.html":[3,1,0],
+"globals_func.html":[3,1,1],
+"index.html":[0],
+"index.html":[],
+"index.html#Abstract":[0,0],
+"index.html#The":[0,0,0],
+"main_8cpp.html":[3,0,0],
+"main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe":[3,0,0,0],
+"md_README.html":[1],
+"pages.html":[]
+};

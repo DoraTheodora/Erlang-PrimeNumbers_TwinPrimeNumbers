@@ -1,6 +1,6 @@
-/*!   \mainpage prime numbers and Prime Twin Numbers
+/*!   \mainpage Prime Numbers and Prime Twin Numbers
       \author Theodora Tataru, Student No: C00231174\n  
-      \date 10 December 2020 
+      \date 26 January 2020 
       \copyright  License: GNU Affero General Public License v3.0 
       \section Abstract
       \subsection The task is to write a parallel program that counts the number of primes less than n for any number n and also finds and lists all twin primes less than n. The code should run on linux.
