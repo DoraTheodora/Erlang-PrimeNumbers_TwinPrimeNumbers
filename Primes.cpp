@@ -11,7 +11,6 @@ bool Primes::isPrime(int n)
     {
         if(number%i==0)
         {
-            std::cout << number << " is not prime" << std::endl;
             return false;
         }
     }
@@ -21,8 +20,28 @@ bool Primes::isPrime(int n)
 
 void Primes::numbersPrimeLessThen(int N)
 {
+    int position = 0;
+    int checkTwins[2] = {0,0};
+    int thisPrime = 0;
+    int prevPrime = 0;
     for(int i = N; i >=2; i--)
     {
-        isPrime(i);
+        if(isPrime(i))
+        {
+            prevPrime = thisPrime;
+            thisPrime = i;
+            checkTwins[position] = prevPrime;
+            checkTwins[position+1] = thisPrime;
+            twins(checkTwins);
+        }
+    }
+}
+
+void Primes::twins(int twin[])
+{
+    //std::cout << "!!! --- Check Twins: " << twin[0] << " and " << twin[1] << std::endl;
+    if(twin[0]-twin[1] == 2)
+    {
+        std::cout << "!!! --- Twins: " << twin[0] << " and " << twin[1] << std::endl;
     }
 }

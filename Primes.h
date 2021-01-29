@@ -9,4 +9,6 @@ class Primes
     bool isPrime(int n);
 
     void numbersPrimeLessThen(int N);
+
+    void twins(int twin[]);
 };
