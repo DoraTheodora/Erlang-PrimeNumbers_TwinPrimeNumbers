@@ -7,6 +7,7 @@
 */
 #include "Primes.h"
 #include <iostream>
+#include <chrono>
 
 int main(void)
 {
@@ -22,8 +23,14 @@ int main(void)
     }*/
     std::cout << "Please insert a number: ";
     std::cin >> number;
-    p.numbersPrimeLessThen(number);
 
+    auto startTime = std::chrono::high_resolution_clock::now();
+    p.numbersPrimeLessThen(number);
+    auto endTime = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( endTime - startTime ).count();
+    std::cout << std::endl;
+    std::cout << "Parallel execution for N = " << number << ": " << duration << " milliseconds" << std::endl;
 
     return 0;
 }
