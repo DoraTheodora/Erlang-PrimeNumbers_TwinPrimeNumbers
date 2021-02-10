@@ -21,15 +21,13 @@ bool Primes::isPrime(int n)
 {
     number = n;
     int half = number/2;
-    for(int i = 2; i < half; i++)
+    bool isPrime = true;
+    for(int i = 2; i <= half; i++)
     {
-        if(number%i==0)
-        {
-            return false;
-        }
+        if(number%i==0 && isPrime)
+            isPrime = false;
     }
-    std::cout << number << " is prime" << std::endl;
-    return true;
+    return isPrime;
 }
 
 /*! \fn void Primes::numbersPrimeLessThen(int N)
@@ -40,8 +38,8 @@ void Primes::numbersPrimeLessThen(int N)
 {
     int thisPrime = 0;
     int prevPrime = 0;
-
-    #pragma omp parallel for
+    int sum = 0;
+    std::cout << "Twins: ";
     for(int i = N; i >=2; i--)
     {
         if(isPrime(i))
@@ -49,8 +47,10 @@ void Primes::numbersPrimeLessThen(int N)
             prevPrime = thisPrime;
             thisPrime = i;
             twins(prevPrime, thisPrime);
+            sum++;
         }
     }
+    std::cout << std::endl << "Number of prime numbers less then " << N << ": " << sum << std::endl;
 }
 
 /*! \fn void Primes::twins(int firstPrime, int secondPrime)
@@ -61,7 +61,5 @@ void Primes::numbersPrimeLessThen(int N)
 void Primes::twins(int firstPrime, int secondPrime)
 {
     if(firstPrime-secondPrime == 2)
-    {
-        std::cout << "!!! --- Twins: " << firstPrime << " and " << secondPrime << std::endl;
-    }
+        std::cout << " (" << firstPrime << "," << secondPrime << ") ";
 }

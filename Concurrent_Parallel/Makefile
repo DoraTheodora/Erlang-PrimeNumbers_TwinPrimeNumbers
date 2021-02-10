@@ -10,10 +10,10 @@ CFLAGS= -std=c++11 -pthread
 
 #This rule says that each .o file depends on a .cpp file of the same name
 %.o: %.cpp
-	$(CC) -c -o $@ $< $(CFLAGS) $(DEBUGFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) $(DEBUGFLAGS) -fopenmp
 
 ALL: main.o  Primes.o
-	$(CC) -o primes_exe main.o Primes.o $(CFLAGS) $(DEBUGFLAGS)
+	$(CC) -o primes_exe main.o Primes.o -fopenmp $(CFLAGS) $(DEBUGFLAGS)
 
 DEBUG: DEBUGFLAGS = -DDEBUG
 DEBUG: ALL

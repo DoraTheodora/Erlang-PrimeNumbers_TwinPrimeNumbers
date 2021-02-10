@@ -23,6 +23,7 @@ int main(void)
     }*/
     std::cout << "Please insert a number: ";
     std::cin >> number;
+    std::cout << std::endl;
 
     auto startTime = std::chrono::high_resolution_clock::now();
     p.numbersPrimeLessThen(number);
@@ -30,7 +31,7 @@ int main(void)
 
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>( endTime - startTime ).count();
     std::cout << std::endl;
-    std::cout << "Sequential execution for N = " << number << ": " << duration << " milliseconds" << std::endl;
+    std::cout << "Sequential execution for N = " << number << ": " << duration << " milliseconds";
 
     return 0;
 }

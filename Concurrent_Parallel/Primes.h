@@ -9,7 +9,6 @@ class Primes
 {
     int number;
     int count;
-    #pragma omp parallel for reduction(+:pc)
     public: Primes()
     {
         number = 0;

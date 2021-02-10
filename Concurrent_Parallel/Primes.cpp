@@ -15,24 +15,22 @@
 Primes::~Primes() = default;
 
 /*! \fn bool Primes::isPrime(int n)
-    \param n The numbers that needs to be checked if is prime or not
-    \brief A method checks if the number given as parameter is prime or not.
+    \param n The numbers that need to be checked if is prime or not
+    \brief A method checks if the number given as a parameter is prime or not.
 */
 bool Primes::isPrime(int n)
 {
     number = n;
     int half = number/2;
-    #pragma omp simd parallel for reduction(+:isPrime)
-    for(int i = 2; i < half; i++)
+    bool isPrime = true;
+    //#pragma omp parallel for num_threads(8) 
+    for(int i = 2; i <= half; i++)
     {
-        count = 0;
-        if(number%i==0)
-        {
-            return false;
-        }
+        //std::cout << "Thread ::isPrime: " <<  omp_get_thread_num() << std::endl;
+        if(number%i==0 && isPrime)
+            isPrime = false;
     }
-    std::cout << number << " is prime" << std::endl;
-    return true;
+    return isPrime;
 }
 
 /*! \fn void Primes::numbersPrimeLessThen(int N)
@@ -43,16 +41,22 @@ void Primes::numbersPrimeLessThen(int N)
 {
     int thisPrime = 0;
     int prevPrime = 0;
-    #pragma omp simd parallel for reduction(+:numbersPrimeLessThen)
+    int sum = 0;
+    std::cout << "Twins: ";
+    #pragma omp parallel for num_threads(8) 
     for(int i = N; i >=2; i--)
     {
+        std::cout << "Thread ::numbersPrimeLessThen: " <<  omp_get_thread_num() << std::endl;
+        #pragma omp critical
         if(isPrime(i))
         {
             prevPrime = thisPrime;
             thisPrime = i;
             twins(prevPrime, thisPrime);
+            sum++;
         }
     }
+    std::cout << std::endl << "Number of prime numbers less then " << N << ": " << sum << std::endl;
 }
 
 /*! \fn void Primes::twins(int firstPrime, int secondPrime)
@@ -63,7 +67,5 @@ void Primes::numbersPrimeLessThen(int N)
 void Primes::twins(int firstPrime, int secondPrime)
 {
     if(firstPrime-secondPrime == 2)
-    {
-        std::cout << "!!! --- Twins: " << firstPrime << " and " << secondPrime << std::endl;
-    }
+        std::cout << " (" << firstPrime << "," << secondPrime << ") ";
 }
