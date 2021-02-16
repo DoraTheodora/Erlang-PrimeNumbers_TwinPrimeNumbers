@@ -1,18 +1,70 @@
 \hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
 \label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
-{\ttfamily \#include \char`\"{}Primes.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+bool \hyperlink{main_8cpp_adcc09b7276198d17d50fa9213b6b4feb}{is\+Prime} (int n)
+\begin{DoxyCompactList}\small\item\em Method that returns if a number is prime or not. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a2d243a062aa8caaf4fca5a74b42d3595}{numbers\+Prime\+Less\+Then} (int N)
+\begin{DoxyCompactList}\small\item\em Method that returns all the prime numbers less than N. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_af8201c0e7b92090293c73af16c369225}{twins} (int N)
+\begin{DoxyCompactList}\small\item\em Method checks if 2 prime numbers are twins from the vector of primes. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\mbox{\Hypertarget{main_8cpp_adcc09b7276198d17d50fa9213b6b4feb}\label{main_8cpp_adcc09b7276198d17d50fa9213b6b4feb}} 
+\index{main.\+cpp@{main.\+cpp}!is\+Prime@{is\+Prime}}
+\index{is\+Prime@{is\+Prime}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{is\+Prime()}{isPrime()}}
+{\footnotesize\ttfamily void is\+Prime (\begin{DoxyParamCaption}\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Method that returns if a number is prime or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number that represents the upper limit of checking prime numbers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.\+cpp@{main.\+cpp}!main@{main}}
 \index{main@{main}!main.\+cpp@{main.\+cpp}}
 \subsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{main_8cpp_a2d243a062aa8caaf4fca5a74b42d3595}\label{main_8cpp_a2d243a062aa8caaf4fca5a74b42d3595}} 
+\index{main.\+cpp@{main.\+cpp}!numbers\+Prime\+Less\+Then@{numbers\+Prime\+Less\+Then}}
+\index{numbers\+Prime\+Less\+Then@{numbers\+Prime\+Less\+Then}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{numbers\+Prime\+Less\+Then()}{numbersPrimeLessThen()}}
+{\footnotesize\ttfamily void numbers\+Prime\+Less\+Then (\begin{DoxyParamCaption}\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Method that returns all the prime numbers less than N. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & The number that represents the upper limit of checking prime numbers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_af8201c0e7b92090293c73af16c369225}\label{main_8cpp_af8201c0e7b92090293c73af16c369225}} 
+\index{main.\+cpp@{main.\+cpp}!twins@{twins}}
+\index{twins@{twins}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{twins()}{twins()}}
+{\footnotesize\ttfamily void Primes\+::twins (\begin{DoxyParamCaption}\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Method checks if 2 prime numbers are twins from the vector of primes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & The number that represents the upper limit of checking for prime twins \\
+\hline
+\end{DoxyParams}

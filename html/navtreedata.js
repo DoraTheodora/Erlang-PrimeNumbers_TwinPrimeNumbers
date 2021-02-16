@@ -7,14 +7,6 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Prime Numbers and Twin Prime Numbers", "md_README.html", null ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
-      ] ]
-    ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
@@ -27,7 +19,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Primes_8cpp.html"
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

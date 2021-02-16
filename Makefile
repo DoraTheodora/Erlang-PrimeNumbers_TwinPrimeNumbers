@@ -12,8 +12,8 @@ CFLAGS= -std=c++11 -pthread
 %.o: %.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(DEBUGFLAGS) -fopenmp
 
-ALL: main.o 
-	$(CC) -o test_exe main.o -fopenmp $(CFLAGS) $(DEBUGFLAGS)
+ALL: main.o  Primes.o
+	$(CC) -o primes_exe main.o -fopenmp $(CFLAGS) $(DEBUGFLAGS)
 
 DEBUG: DEBUGFLAGS = -DDEBUG
 DEBUG: ALL
