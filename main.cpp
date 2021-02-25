@@ -3,7 +3,7 @@
       \date 26 January 2020 
       \copyright  License: GNU Affero General Public License v3.0 
       \section Abstract
-      \subsection The task is to write a parallel program that counts the number of primes less than n for any number n and also finds and lists all twin primes less than n. The code should run on linux.
+      \subsection _ The task is to write a parallel program that counts the number of primes less than n for any number n and also finds and lists all twin primes less than n. The code should run on linux.
 */
 #include <iostream>
 #include <chrono>
@@ -16,15 +16,14 @@
 */
 bool isPrime(int n)
 {
-    int number = n;
-    int half = number/2;
-    if(number <= 1) return false;
-    if(number <= 3) return true;
-    if(number%3 == 0) return false;
-    if(number%2 == 0) return false;
-    for(int i = 5; i<=half; i++)
+    if(n <= 1) return false;
+    if(n <= 3) return true;
+    if(n%2 == 0) return false;
+    if(n%3 == 0) return false;
+    int half = n/2;
+    for(int i = 5; i<= half; i++)
     {
-        if(number%i==0)
+        if(n%i==0)
         {
             return false;
         }
@@ -40,13 +39,12 @@ bool isPrime(int n)
 void numbersPrimeLessThen(int N)
 {
     int count = 0;
-    #pragma omp parallel for num_threads(1) shared(count)
+    //#pragma omp parallel for num_threads(4) shared(count) schedule(dynamic)
     for(int number = 2; number <= N; number++) 
     {
-        //std::cout << "Thread ::numbersPrimeLessThen: " <<  omp_get_thread_num() << std::endl;
         if(isPrime(number))
         {
-            #pragma omp atomic
+            //#pragma omp atomic
             count++;
         }
     }
@@ -59,21 +57,24 @@ void numbersPrimeLessThen(int N)
 */
 void twins(int N)
 {
-    std::cout << "Twins: " << std::endl;
     int sum = 0;
-    //#pragma omp parallel for num_threads(4) 
-    for(int i = 2; i <= N; i++)
+    //#pragma omp parallel for num_threads(4) schedule(dynamic)
+    for(int i = N; i >= 2 ; i--)
     {
         if(isPrime(i) && isPrime(i+2))
         {
-            printf(" (%d,%d)",i,i+2); 
-            //#pragma omp atomic
+           // #pragma omp atomic
             sum++;
         }
     }
     printf("\nNumbers of prime twins: %d", sum);
 }
 
+/*! \fn main(int argc, char *argv[])
+    \param argc Represents the number of command line arguments
+    \param argv Is an array of strings (character pointers) representing the individual arguments provided on the command line
+    \brief Driver method of the progran
+*/
 int main(int argc, char *argv[])
 {
     char *numberFromCommandLine = argv[1];
