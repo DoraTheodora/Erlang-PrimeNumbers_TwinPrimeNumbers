@@ -52,5 +52,5 @@ Twin Primes: 3, 5, 7, 11, 13, 17, 19, 29, 31, 41, 43
         2. Speedup Results Both absolute speedup and relative speedup should be calculated
 
         3. Scalability Graph(s) showing the scalabiltiy of the code.
-<b> The report can be found at:</b>
+<b> The report can be found at:</b>https://github.com/DoraTheodora/PrimeNumbers_TwinPrimeNumbers/blob/main/Theodora_Tatatu-Report.pdf 
 
